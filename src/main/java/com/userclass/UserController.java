@@ -50,7 +50,7 @@ public class UserController {
             Path path = Paths.get(FOLDER + file.getOriginalFilename());
             Files.write(path, bytes);
             return "Avatar URI: " + path;
-        } catch (IOException e) {
+        } catch (Exception e) {
             return e.getMessage();
         }
     }
