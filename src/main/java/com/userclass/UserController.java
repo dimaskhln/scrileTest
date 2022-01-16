@@ -51,7 +51,7 @@ public class UserController {
             Files.write(path, bytes);
             return "Avatar URI: " + path;
         } catch (IOException e) {
-            return "Error uploading file";
+            return e.getMessage();
         }
     }
 }
